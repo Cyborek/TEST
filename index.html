@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Shoper</title>
-	<link rel="stylesheet" href="css/test.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
@@ -13,26 +13,26 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="top-bar">
-				<button class="menu-button">
-					<img class="menu-button__icon" src="img/icons/menu.svg" alt="">
-					<img class="menu-button__icon" src="img/icons/cross.svg" alt="">
+				<button id="menu-button" class="menu-button">
+					<img id="hamburger" class="menu-button__icon" src="img/icons/menu.svg" alt="">
+					<img id="cross" class="menu-button__icon menu-button__icon--disabled" src="img/icons/cross.svg" alt="">
 				</button>
 				<h1 class="logo">
 					<a class="logo__link" href="index.html"><img class="logo__link-img" src="img/logo.png" alt="Shoper"></a>
 				</h1>
-				<button class="sign-in-button">
+				<a href="signIn.html" class="sign-in-button">
 					<span class="sign-in-button__text">Twoje konto</span>
 					<img class="sign-in-button__user-icon" src="img/icons/user.svg" alt="">
-				</button>
+				</a>
 			</div>
 			<div class="center-bar">
-				<nav class="nav">
-					<ul class="list">
-						<li class="list-box"><a class="list-box__link" href="">Strona główna</a></li>
-						<li class="list-box"><a class="list-box__link" href="">Platformy</a></li>
-						<li class="list-box"><a class="list-box__link" href="">Gry</a></li>
-						<li class="list-box"><a class="list-box__link" href="">Informacje</a></li>
-						<li class="list-box"><a class="list-box__link" href="">Kontakty</a></li>
+				<nav id="nav" class="nav nav--disabled">
+					<ul id="menu-list" class="list">
+						<li class="list-box"><a class="list-box__link" href="index.html">Strona główna</a></li>
+						<li class="list-box"><a class="list-box__link" href="#platformy">Platformy</a></li>
+						<li class="list-box"><a class="list-box__link" href="#gry">Gry</a></li>
+						<li class="list-box"><a class="list-box__link" href="#team">Informacje</a></li>
+						<li class="list-box"><a class="list-box__link" href="#kontakt">Kontakty</a></li>
 					</ul>
 				</nav>
 				<div class="text-container">
@@ -44,7 +44,7 @@
 		</div>
 	</header>
 	<main class="main">
-		<section class="platforms">
+		<section id="platformy" class="platforms">
 			<div class="platform-tile">
 				<figure class="platform-title__icon-box">
 					<img class="platform-title__icon" src="img/icons/PS4.svg" alt="Playstation 4 logo">
@@ -67,7 +67,7 @@
 				<a class="platfrom-title__link" href="">Wiecej <img class="platfrom-title__link-icon" src="img/icons/chevron-down.svg" alt=""></a>
 			</div>
 		</section>
-		<section class="about-us">
+		<section id="team" class="about-us">
 			<div class="slider-container">
 				<figure class="slider">
 					<img class="slider__photo slider__photo--active" src="img/team-photo-1.jpg" alt="">
@@ -75,9 +75,9 @@
 					<img class="slider__photo" src="img/team-photo-3.jpg" alt="">
 				</figure>
 				<div class="buttons-bar">
-					<button class="buttons-bar__button buttons-bar__button--active"></button>
-					<button class="buttons-bar__button"></button>
-					<button class="buttons-bar__button"></button>
+					<button id="0" class="buttons-bar__button buttons-bar__button--active"></button>
+					<button id="1" class="buttons-bar__button"></button>
+					<button id="2" class="buttons-bar__button"></button>
 				</div>
 			</div>
 			<div class="text-container">
@@ -85,7 +85,7 @@
 				<p class="text-container__text">Nam elementum interdum enim, at rutrum risus. Aliquam porta iaculis volutpat. Ut diam massa, pharetra ut lectus pulvinar, ultrices mattis tellus. Ut auctor, quam et tincidunt pretium, odio lacus placerat velit, in luctus arcu ante sed nibh. Maecenas ac hendrerit justo, eget congue metus. Curabitur lacinia euismod felis in varius. Proin volutpat lectus ut nibh facilisis aliquam. Nullam dui ligula, vestibulum non tellus ultricies, iaculis placerat sem. Nulla luctus ante nunc, vel convallis dolor euismod vitae. Maecenas non venenatis lectus. Quisque ullamcorper, quam et vestibulum interdum, urna tortor viverra sem, id feugiat sapien nibh a lorem.</p>
 			</div>
 		</section>
-		<section class="game-genres">
+		<section id="gry" class="game-genres">
 			<h3 class="game-genres__heading">Gatunki gier</h3>
 			<p class="game-genres__subheading">Wybiez to co Cie interesuje</p>
 			<div class="games-container">
@@ -115,7 +115,7 @@
 				</a>
 			</div>
 		</section>
-		<section class="contact-form">
+		<section id="kontakt" class="contact-form">
 			<h3 class="contact-form__heading">Kontakt</h3>
 			<p class="contact-form__subheading">Masz pytanie ? Napisz do nas</p>
 			<form class="form" method="post">
@@ -149,6 +149,7 @@
 			</li>
 		</ul>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
